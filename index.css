@@ -1,0 +1,1522 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+:root {
+    --orange: orange;
+    --white: white;
+    --grey: #666565;
+    --boldfont: 'Nunito', sans-serif;
+    --parafont: "Heebo", sans-serif;
+    --parafont2: 'Pacifico', cursive;
+}
+
+
+/*STYLES FOR BACKGROUND IMAGE IN FIRST CONTAINER */
+.container {
+    min-height: 100vh;
+}
+
+.container .backgroundimage {
+    width: 100%;
+    height: 100%;
+    filter: brightness(30%);
+    object-fit: cover;
+}
+
+/* STYLES FOR HEADER NAV BAR */
+
+.headernavbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    color: var(--white);
+    background-color: rgba(0, 0, 95, 0.8);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+/* STYLES FOR HEADER NAV BAR H1 TAG */
+
+.headernavbar h1 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--orange);
+    cursor: pointer;
+}
+
+/* STYLES FOR NAV BAR CONTENTS */
+
+.navbarcontents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+/* STYLES FOR ANKER TAGS IN NAV BAR CONTENTS */
+
+.navbarcontents a {
+    padding: 5px;
+    border: 2px solid transparent;
+    transition: all 0.5s;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: var(--parafont);
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+
+
+/* STYLES FOR HOVERING ANKER TAGS IN NAV BAR CONTENTS */
+
+.navbarcontents a:hover {
+    border-bottom: 2px solid tomato;
+}
+
+/* STYLES FOR HIDING NAVBAR CONTENTS FOR MOBILE VIEW */
+
+.headernavbar #box,
+.headernavbar .bar {
+    display: none;
+}
+
+.headernavbar input:checked~.navbarcontents {
+    left: 0;
+}
+
+/* STYLES FOR REPLACING SEARCH BAR IN  MOBILE VIEW & DESKTOP VIEW */
+
+.headernavbar #search {
+    display: none;
+}
+
+.headernavbar .searchinput {
+    padding: 10px;
+    width: 490px;
+    position: fixed;
+    top: -100%;
+    right: 80px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+}
+
+.fa-magnifying-glass {
+    cursor: pointer;
+}
+
+.headernavbar input:checked~.searchinput {
+    top: 20px;
+}
+
+/* STYLES FOR FIRSTCONTENT DIV*/
+
+.firstcontent {
+    min-height: 100vh;
+    top: 50px;
+    padding: 90px 10px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)),
+        url('./Images/Restaurent\ Background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+/* STYLES FOR TEXT CONTENT, IN FIRSTCONTENT DIV*/
+
+.textcontent {
+    max-width: 500px;
+    padding: 14px;
+    color: var(--white);
+}
+
+
+/* STYLES FOR TEXT CONTENT H1, IN FIRSTCONTENT DIV*/
+
+.textcontent h1 {
+    font-size: 3.5em;
+    font-weight: 800;
+    font-family: var(--boldfont);
+    line-height: 75px;
+}
+
+
+/* STYLES FOR TEXT CONTENT P, IN FIRSTCONTENT DIV*/
+
+.textcontent p {
+    line-height: 22px;
+    font-family: var(--parafont);
+    padding: 30px 0 40px;
+}
+
+
+/* STYLES FOR BUTTON, IN FIRSTCONTENT DIV*/
+
+.textcontent .textcontentbutton {
+    padding: 20px 50px;
+    border: unset;
+    border-radius: 8px;
+    background-color: var(--orange);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* STYLES FOR IMAGE CONTENT, IN FIRSTCONTENT DIV*/
+
+.imagecontent {
+    width: 500px;
+    padding: 40px;
+    overflow: hidden;
+}
+
+/* STYLES FOR IMAGE, IN IMAGECONTENT DIV*/
+
+.imagecontent img {
+    width: 100%;
+    height: 100%;
+    animation-name: foodplate;
+    animation-duration: 50s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+/* STYLES FOR ANIMATION, FOR IMAGE IN IMAGECONTENT DIV*/
+
+@keyframes foodplate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+                        /* STYLES FOR SECONDCONTENT */
+
+.secondcontent {
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.secondcontent article {
+    width: 250px;
+    height: 250px;
+    box-shadow: 0 4px 8px 0 rgba(255, 0, 0, 0.2), 0 6px 20px 0 rgba(255, 0, 0, 0.19);
+    padding: 20px;
+}
+
+.secondcontent article i:first-child {
+    color: var(--orange);
+    margin-bottom: 20px;
+}
+
+.secondcontent article h1:nth-child(2) {
+    font-family: var(--boldfont);
+    margin-bottom: 10px;
+}
+
+
+.secondcontent article p:last-child {
+    font-family: var(--parafont);
+    color: var(--grey);
+    line-height: 1.5;
+}
+
+.secondcontent article:hover {
+    background-color: var(--orange);
+    color: var(--white);
+    transition: all 0.5s;
+    transform: scale(1.1);
+    transform: rotate(360deg);
+}
+
+.secondcontent article:hover i:first-child,
+.secondcontent article:hover p:last-child {
+    color: var(--white);
+    transition: all 0.5s;
+}
+
+.secondcontent article:first-child {
+    position: relative;
+    animation-name: article1;
+    animation-duration: 1s;
+}
+
+@keyframes article1 {
+    from {
+        top: 100px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.secondcontent article:nth-child(2) {
+    position: relative;
+    animation-name: article2;
+    animation-duration: 1s;
+}
+
+@keyframes article2 {
+    from {
+        top: 200px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.secondcontent article:nth-child(3) {
+    position: relative;
+    animation-name: article3;
+    animation-duration: 1s;
+}
+
+@keyframes article3 {
+    from {
+        top: 300px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.secondcontent article:last-child {
+    position: relative;
+    animation-name: article4;
+    animation-duration: 1s;
+}
+
+@keyframes article4 {
+    from {
+        top: 400px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+                            /* STYLES FOR ABOUTCONTENT */
+
+
+.aboutcontent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    min-height: 100vh;
+    flex-wrap: wrap;
+}
+
+.aboutcontent section {
+    min-height: 80vh;
+    padding: 10px;
+}
+
+.aboutcontent section:first-child {
+    width: 450px;
+    display: flex;
+    gap: 5px;
+    padding: unset;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.aboutcontent section:first-child article {
+    width: 49%;
+    height: 40vh;
+}
+
+.aboutcontent section:first-child article img,
+section:first-child article:last-child img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.aboutcontent section:first-child article:nth-child(2) img,
+section:first-child article:nth-child(3) img {
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+
+.aboutcontent section:first-child article:nth-child(2) {
+    display: flex;
+    justify-content: start;
+    align-items: end;
+}
+
+.aboutcontent section:first-child article:nth-child(3) {
+    display: flex;
+    justify-content: end;
+    align-items: start;
+}
+
+
+.aboutcontent section:last-child {
+    width: 650px;
+}
+
+
+.aboutcontent section:last-child h1:first-child {
+    color: var(--orange);
+    font-size: 24px;
+    font-family: var(--parafont2);
+}
+
+.aboutcontent section:last-child h1:first-child::after {
+    content: "";
+    width: 45px;
+    height: 2px;
+    background: var(--orange);
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+.aboutcontent section:last-child h1:nth-child(2) {
+    font-family: var(--boldfont);
+    font-size: 40px;
+}
+
+.aboutcontent section:last-child h1:nth-child(2) i {
+    color: var(--orange);
+}
+
+.aboutcontent section:last-child p {
+    font-family: var(--parafont);
+    color: var(--grey);
+    margin-top: 15px;
+    line-height: 25px;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.aboutcontent section:last-child button:last-child {
+    padding: 15px 35px;
+    background-color: var(--orange);
+    font-weight: bold;
+    color: var(--white);
+    border: unset;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+                                /* STYLES FOR MENU CONTENT*/
+
+
+.menu {
+    min-height: 100vh;
+}
+
+.menu h2:first-child {
+    font-family: var(--parafont2);
+    color: var(--orange);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.menucontent {
+    padding: 0 20px;
+    min-height: 90vh;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menulist {
+    max-width: 575px;
+    height: 90vh;
+    overflow: scroll;
+    padding: 0 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 5px rgba(255, 0, 0, 0.3), 0 6px 20px 0 rgba(255, 0, 0, 0.2);
+}
+
+.menulist::-webkit-scrollbar {
+    display: none;
+}
+
+.menulist .menutitle {
+    text-align: center;
+    color: var(--orange);
+    font-family: var(--parafont2);
+}
+
+.menulist .menuheading {
+    text-align: center;
+    font-family: var(--boldfont);
+    color: var(--orange);
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    padding: 5px 0;
+    border-bottom: 1px solid red;
+}
+
+
+.menulist section {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    gap: 20px;
+}
+
+.menulist section article:nth-child(2) {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.menulist section img {
+    border-radius: 4px;
+}
+
+.menulist section article:nth-child(2) h3:first-child {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--boldfont);
+    font-size: 1.25rem;
+    line-height: 25px;
+}
+
+.menulist section article:nth-child(2) h3:first-child span:last-child {
+    color: var(--orange);
+}
+
+.menulist section article:nth-child(2) small {
+    font-family: var(--parafont);
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--grey);
+}
+
+.menuimage {
+    width: 575px;
+    height: 90vh;
+}
+
+.menuimage img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+/* SCROLL MENU  */
+
+.scrollmenu {
+    margin: 50px 0;
+}
+
+.scrollmenu h1:first-child {
+    font-family: var(--parafont2);
+    color: var(--orange);
+    margin-bottom: 20px;
+}
+
+.scrollmenu label {
+    font-size: 2rem;
+    font-family: var(--boldfont);
+    padding: 0 20px;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+}
+
+.scrollmenu label i {
+    color: var(--orange);
+    font-size: 2rem;
+}
+
+
+.listimages {
+    width: 93%;
+    /* margin: auto; */
+    /* background-color: bisque; */
+    height: 300px;
+    margin: 30px auto 0;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 10px;
+    overflow: scroll;
+    border-radius: 3px;
+}
+
+.listimages::-webkit-scrollbar {
+    display: none;
+}
+
+.imagelist {
+    height: 95%;
+    min-width: 200px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.3), 4px 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+.imagelist nav {
+    /* width: 100%; */
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(0, 71, 115, 0.811));
+    /* backdrop-filter: blur(3px); */
+    display: none;
+    transition: all 1s;
+}
+
+.imagelist:hover {
+    transform: scale(1.05);
+}
+
+.imagelist:hover nav {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    gap: 5px;
+    color: var(--white);
+    padding-bottom: 30px;
+    border-radius: 8px;
+}
+
+.imagelist nav h3 {
+    font-family: var(--parafont2);
+    color: var(--orange);
+}
+
+.imagelist nav p {
+    font-family: var(--boldfont);
+    font-style: italic;
+}
+
+.imagelist nav hr {
+    width: 50%;
+}
+
+.imagelist1 {
+    background: url(https://s3-ap-south-1.amazonaws.com/betterbutterbucket-silver/divya-jain1120181209215834493.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.imagelist2 {
+    background: url(https://recipes.timesofindia.com/thumb/54289752.cms?width=1200&height=900);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.imagelist3 {
+    background: url(https://ministryofcurry.com/wp-content/uploads/2020/03/puri-7.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.imagelist4 {
+    background: url(https://i0.wp.com/blendofspicesbysara.com/wp-content/uploads/2021/07/PXL_20210712_211207957.PORTRAIT-01.jpeg?w=800&ssl=1);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.imagelist5 {
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsgGQ5YL85fpY2T_rncpxNmQPdbTCf2CN2kmu7Gcq9JQfFQJ4oM3sozyqSkPy7AjRGWIs&usqp=CAU);
+}
+
+.imagelist6 {
+    background: url(https://www.krumpli.co.uk/wp-content/uploads/2023/05/Homemade-Indian-Chapati-05.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.imagelist7 {
+    background: url(https://thebigmansworld.com/wp-content/uploads/2022/01/healthy-breakfast-ideas1.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.imagelist8 {
+    background: url(https://www.vegrecipesofindia.com/wp-content/uploads/2021/06/idli-recipe-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* LUNCH IMAGES  */
+
+.lunch1 {
+    background: url(https://farm8.staticflickr.com/7671/17269221094_6c0b6605a8_z.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.lunch2 {
+    background: url(https://5.imimg.com/data5/SELLER/Default/2022/6/ZP/TZ/IK/144143379/lunch-food-services-500x500.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.lunch3 {
+    background: url(https://media-cdn.tripadvisor.com/media/photo-s/18/de/30/ce/img-20190819-144555-01.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.lunch4 {
+    background: url(https://static.toiimg.com/thumb/msid-67454814,width-1280,resizemode-4/67454814.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.lunch5 {
+    background: url(https://indiarestaurant.com/wp-content/uploads/2021/02/GRAB-N-GO-Thali-Pic-01.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.lunch6 {
+    background: url(https://qph.cf2.quoracdn.net/main-qimg-8454d5a2872f553e8d81677437d0ad91.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.lunch7 {
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp6Fff4H8_qM3ltQ6i2wzR-Dw0qWy5-0ZDWg&usqp=CAU);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.lunch8 {
+    background: url(https://www.funfoodfrolic.com/wp-content/uploads/2019/08/13.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* DINNER IMAGES  */
+
+.dinner1 {
+    background: url(https://images.news18.com/ibnlive/uploads/2022/06/malabar-paratha.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.dinner2 {
+    background: url(https://spicecravings.com/wp-content/uploads/2020/12/Roti-Featured-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.dinner3 {
+    background: url(https://www.tiktokbriyani.com/assets/images/blog1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.dinner4 {
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOqDkoPIW3FUIx-gIIcAQLSpQg6bJjU-W6q9z9HhksQzXePyRyFBmY_AwQ3Nmy32R6pDE&usqp=CAU);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.dinner5 {
+    background: url(https://www.cookwithkushi.com/wp-content/uploads/2016/03/best_easy_Indian_spring_dosa_recipe.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.dinner6 {
+    background: url(https://nishkitchen.com/wp-content/uploads/2016/03/EGG-FRIED-RICE-1B.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.dinner7 {
+    background: url(https://static.toiimg.com/photo/53094793.cms);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.dinner8 {
+    background: url(https://www.flourandspiceblog.com/wp-content/uploads/2021/01/IMG_0478.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+.lunch,
+.dinner {
+    display: none;
+    position: relative;
+}
+
+.scrollmenu {
+    text-align: center;
+}
+
+.scroll{
+    font-family: var(--parafont2);
+    color: red;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.scrollmenu input {
+    display: none;
+}
+
+.scrollmenu label:hover {
+    border-bottom: 2px solid var(--orange);
+}
+
+.scrollmenu #lunch:checked~.lunch {
+    display: flex;
+}
+
+.scrollmenu #lunch:checked~.bf {
+    display: none;
+}
+
+.scrollmenu #dinner:checked~.dinner {
+    display: flex;
+}
+
+.scrollmenu #dinner:checked~.lunch,
+.scrollmenu #dinner:checked~.bf {
+    display: none;
+}
+
+
+
+
+
+/*Reservation Div*/
+
+.reservationdiv {
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.welcomevideodiv {
+    height: 500px;
+}
+
+.welcomevideodiv video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.reservation {
+    max-height: 100%;
+    color: white;
+    background-color: rgb(13, 13, 50);
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.reservation p:first-child {
+    font-family: var(--parafont2);
+    color: var(--orange);
+}
+
+.reservation h1:nth-child(2) {
+    font-family: var(--boldfont);
+    color: var(--white);
+}
+
+.reservation input {
+    width: 47%;
+    padding: 20px;
+    border-radius: 5px;
+    outline-color: var(--orange);
+}
+
+.inputalign {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputalign select {
+    width: 47%;
+    padding: 20px;
+    border-radius: 5px;
+    outline-color: var(--orange);
+}
+
+.reservation textarea {
+    height: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    outline-color: var(--orange);
+}
+
+.reservation button {
+    background-color: var(--orange);
+    padding: 15px;
+    color: var(--white);
+    font-weight: bold;
+    border: unset;
+    border-radius: 5px;
+}
+
+                                    /* STYLES FOR CHEFS*/
+
+
+.chef {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.chef p:first-child {
+    font-family: var(--parafont2);
+    color: var(--orange);
+    font-size: 1.5rem;
+}
+
+.chef h1:nth-child(2) {
+    font-family: var(--boldfont);
+    font-size: 3rem;
+    margin: 20px 0 30px;
+    line-height: 50px;
+}
+
+.chef .masters {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.masters section {
+    height: 350px;
+    width: 270px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 5px rgba(255, 0, 0, 0.3), 0 6px 20px 0 rgba(255, 0, 0, 0.2);
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.master1 {
+    background: url(./Images/Chef-Damodharan.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.master2 {
+    background: url(./Images/prakash1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.master3 {
+    background: url(./Images/vankatesh\ bhat.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.master4 {
+    background: url(./Images/rekha\ chef.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.masters section nav h2 {
+    font-family: var(--parafont2);
+    color: var(--orange);
+}
+
+.masters section nav hr {
+    width: 70%;
+    font-weight: bold;
+}
+
+.cheficon {
+    display: flex;
+    color: var(--white);
+    justify-content: center;
+    font-size: 25px;
+    gap: 20px;
+}
+
+.cheficon i {
+    cursor: pointer;
+}
+
+.masters section nav {
+    display: none;
+}
+
+.master1:hover {
+    background: url(https://gumlet.vikatan.com/vikatan%2F2019-08%2Fe364abdb-3a1c-407e-82e5-360ffddf14f4%2FSi4.jpg?format=auto);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(360deg);
+}
+
+.master2:hover {
+    background: url(./Images/prakash\ chef.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(360deg);
+}
+
+.master3:hover {
+    background: url(https://images.newindianexpress.com/uploads/user/imagelibrary/2012/10/2/22/w600X390/Venkatesh-Bhat.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(360deg);
+}
+
+.master4:hover {
+    background: url(https://images.hindustantimes.com/rf/image_size_640x362/HT/p2/2016/03/04/Pictures/_ea51e8da-e1f0-11e5-9948-13623a58218c.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(360deg);
+}
+
+.masters section:hover nav {
+    display: inline;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    background: linear-gradient(to bottom, transparent, rgba(0, 71, 115, 0.811));
+}
+
+
+                                /* STYLES FOR REVIEWS*/
+
+
+.testimonial {
+    margin: 70px 0;
+}
+
+.testimonial h1:first-child {
+    text-align: center;
+    font-family: var(--boldfont);
+    margin-bottom: 20px;
+}
+
+.review {
+    margin: auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.review1 {
+    padding: 20px;
+    box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.review1 section:first-child img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.review1 section:first-child {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.review1 nav h2 {
+    font-family: var(--boldfont);
+}
+
+.review1 section:last-child {
+    padding: 15px 0 0 75px;
+}
+
+.review1 section:last-child p {
+    font-family: var(--parafont2);
+    color: var(--grey);
+}
+
+/* FOOTER STYLES */
+
+footer {
+    background-color: rgba(0, 0, 65);
+    display: flex;
+    justify-content: center;
+    padding: 100px 0 50px 30px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+footer section {
+    font-family: var(--parafont);
+    width: 250px;
+}
+
+footer section:first-child a {
+    display: block;
+    padding: 7px 0;
+    color: var(--white);
+    cursor: pointer;
+    transition: all 0.5s;
+    width: 170px;
+    text-decoration: none;
+}
+
+footer section:first-child a:hover {
+    letter-spacing: 1px;
+}
+
+
+footer section p {
+    padding: 7px 0;
+    color: var(--white);
+}
+
+footer section h3:first-child {
+    font-family: var(--parafont2);
+    color: var(--orange);
+    margin-bottom: 20px;
+}
+
+footer section:nth-child(2) nav i {
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 8px;
+    color: var(--white);
+    font-size: 20px;
+    margin: 10px 5px 0 0;
+    cursor: pointer;
+}
+
+footer section:nth-child(2) nav i:nth-child(2) {
+    padding: 8px 12px;
+}
+
+footer section:nth-child(2) nav i:nth-child(3) {
+    padding: 8px 6.5px;
+}
+
+footer section:nth-child(2) nav i:last-child {
+    padding: 8px 9px;
+}
+
+footer section:nth-child(2) nav i:hover {
+    background-color: var(--white);
+    color: var(--orange);
+}
+
+footer section:nth-child(3) h4 {
+    font-family: var(--boldfont);
+    color: var(--white);
+    font-size: 1.25rem;
+}
+
+footer section:last-child button {
+    padding: 10px 25px;
+    background-color: var(--orange);
+    color: var(--white);
+    border: unset;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.copyrights {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 50px;
+    background-color: rgba(0, 0, 65);
+    border-top: 1px solid white;
+    color: var(--white);
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.copyrights div:first-child a {
+    text-decoration: none;
+    color: var(--white);
+    border-bottom: 1px solid white;
+}
+
+
+.copyrights div:last-child a {
+    padding: 0 15px;
+    border-right: 1px solid white;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.copyrights div:last-child a:last-child {
+    border: unset;
+}
+
+/* ABOUT PAGE HTML*/
+
+.aboutpage {
+    height: 100vh;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.605),
+            rgba(0, 0, 0, 0.605)),
+        url('https://t3.ftcdn.net/jpg/03/24/73/92/360_F_324739203_keeq8udvv0P2h1MLYJ0GLSlTBagoXS48.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    font-family: var(--boldfont);
+    font-size: 2rem;
+    color: var(--white);
+    text-align: center;
+}
+
+/* MENU PAGE HTML*/
+
+.menupage {
+    height: 100vh;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.450),
+            rgba(0, 0, 0, 0.450)),
+        url('https://png.pngtree.com/thumb_back/fh260/back_pic/03/53/33/45579720d58a73c.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--boldfont);
+    font-size: 2rem;
+    color: var(--white);
+    text-align: center;
+}
+
+/* table PAGE HTML*/
+
+.tablepage {
+    height: 100vh;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.450),
+            rgba(0, 0, 0, 0.450)),
+        url('https://www.mashed.com/img/gallery/reddit-cant-believe-this-ridiculous-restaurant-reservation-story/intro-1632925093.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    font-family: var(--boldfont);
+    font-size: 1.5rem;
+    color: var(--white);
+    text-align: center;
+}
+
+
+/* CONTACT US PAGE  */
+
+.contactpage {
+    height: 100vh;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.450),
+            rgba(0, 0, 0, 0.450)),
+        url('https://img.freepik.com/free-photo/vintage-old-rustic-cutlery-dark_1220-4886.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    font-family: var(--boldfont);
+    font-size: 1.5rem;
+    color: var(--white);
+    text-align: center;
+}
+
+.contactpage nav i {
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 8px;
+    color: var(--white);
+    font-size: 20px;
+    margin: 10px 5px 0 0;
+    cursor: pointer;
+}
+
+.contactpage nav i:nth-child(2) {
+    padding: 8px 12px;
+}
+
+.contactpage nav i:nth-child(3) {
+    padding: 8px 6.5px;
+}
+
+.contactpage nav i:last-child {
+    padding: 8px 9px;
+}
+
+.contactpage nav i:hover {
+    background-color: var(--white);
+    color: var(--orange);
+}
+
+.location {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+}
+
+.location video {
+    object-fit: cover;
+}
+
+                                            /* CONTACT FORM  */
+
+
+.form {
+    max-width: 600px;
+    background-color: rgb(13, 13, 50);
+    padding: 20px;
+    margin: 20px auto;
+    color: var(--white);
+    border-radius: 5px;
+}
+
+.form h2:first-child {
+    font-family: var(--parafont2);
+    color: var(--orange);
+    padding-bottom: 10px;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: var(--boldfont);
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border-radius: 5px;
+    outline-color: var(--orange);
+    border: unset;
+}
+
+.form ::placeholder {
+    color: black;
+    font-family: var(--parafont);
+    font-style: italic;
+}
+
+.form button {
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 15px;
+    font-family: var(--boldfont);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE MEDIA QUERY  */
+
+@media screen and (max-width:850px) {
+    .navbarcontents {
+        position: absolute;
+        flex-direction: column;
+        top: 56px;
+        left: -100%;
+        background:
+        linear-gradient(rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.8)),
+        url('https://w0.peakpx.com/wallpaper/204/885/HD-wallpaper-custom-food-store-wood-pattern-coffee-3d-retro-mural-for-the-restaurant-cafe-hotel-background-wall-pvc-fabric-textile-wallcoverings-food-vintage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+        width: 100%;
+        height: 90vh;
+        padding: 50px 0 0;
+        justify-content: start;
+    }
+
+    .headernavbar .bar {
+        display: inline;
+        font-size: 30px;
+    }
+
+    .headernavbar h1 {
+        font-size: 30px;
+    }
+
+    .headernavbar .searchinput {
+        width: 250px;
+        position: unset;
+        display: none;
+    }
+
+    .headernavbar input:checked~.searchinput {
+        display: inline;
+    }
+
+    .firstcontent {
+        text-align: center;
+    }
+
+    .reservationdiv {
+        grid-template-columns: auto;
+    }
+
+    .reservation {
+        padding: 20px;
+    }
+
+    .inputalign {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .inputalign input,
+    .inputalign select {
+        width: 100%;
+        gap: 10px;
+        padding: 15px;
+    }
+
+
+    .copyrights {
+        justify-content: center;
+    }
+
+    .imagecontent {
+        padding: 15px;
+    }
+
+    .scrollmenu label{
+        display: inline-block;
+    }
+
+    .review1 section:first-child {
+        flex-direction: column;
+    }
+
+    .review1 section:last-child {
+        padding: 15px 0 0;
+    }
+}
