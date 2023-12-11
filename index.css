@@ -8,6 +8,24 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+
+    width: 6px;
+}
+
+                            /* Track */
+::-webkit-scrollbar-track {
+
+     background:#F5F5F5; 
+}
+
+                            /* Handle */
+::-webkit-scrollbar-thumb {
+
+    background:linear-gradient(75deg,yellow,red);
+
+}
+
 
 
 :root {
